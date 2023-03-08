@@ -50,29 +50,85 @@ print(slownik)
 print(slownik.keys())
 print(slownik.values)
 
-print('a = %(zm)d' % {'zm': 12})
-print('a={}, b={}'.format(12, 14))
+# print('a = %(zm)d' % {'zm': 12})
+# print('a={}, b={}'.format(12, 14))
 
-a = input('podaj a:')
-b = input('podaj b:')
-print(a)
-print(b)
-print(type(a))
-print(type(b))
+# a = input('podaj a:')
+# b = input('podaj b:')
+# print(a)
+# print(b)
+# print(type(a))
+# print(type(b))
 
-a = int(a)
-b = int(b)
+# a = int(a)
+# b = int(b)
 
-if a > b:
-    print('a = ' + str(a))
-elif a < b:
-    print('b = ' + str(b))
-else:
-    print('a równe b')
+# if a > b:
+#     print('a = ' + str(a))
+# elif a < b:
+#     print('b = ' + str(b))
+# else:
+#     print('a równe b')
 
-if a > b:
-    print('a jest większe')
-elif a < b:
-    print('b jest większe')
-else:
-    print('a równe b')
+# if a > b:
+#     print('a jest większe')
+# elif a < b:
+#     print('b jest większe')
+# else:
+#     print('a równe b')
+
+
+# a = int(a)
+# b = int(b)
+# c = int(c)
+# d = int(d)
+#
+# if (a > b) & (c > d):
+#     print(a, c)
+# else:
+#     print('a nie jest większe od b lub c niejest większe od d')
+
+
+#for element in sekwencja:
+#    instrukcja 1
+#    instrukcja 2
+# else:
+#    istrukca 1
+
+for x in range(1, 6, 1):
+    print(x)
+    print("")
+
+
+# range(start, stop, step) for(int i = 0, i < lista.count(), i++)
+
+#while warunek:
+    #instrukcja 1
+    #instrukcja 2
+#else:
+    #instrukcaj1
+
+# licznik = 0
+# while licznik !=len(lista):
+#     print(lista[licznik])
+#     licznik += 1
+
+# liczby = [3, 45, 1, 7, 8, 5]
+# licznik = 0
+# a = int(input('podaj a:'))
+# while licznik != len(liczby):
+#     if a - liczby[licznik] == 0:
+#         print('{} - {} = 0'.format(a, liczby[licznik]))
+#         break
+#     licznik += 1
+
+
+liczby = [1, 2, 2, 2, 2, 3]
+licznik = 0
+while licznik != len(liczby):
+    if liczby[licznik] == 2:
+        liczby.remove(liczby[licznik])
+    else:
+        licznik += 1
+
+print(liczby)

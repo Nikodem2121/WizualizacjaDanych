@@ -123,12 +123,12 @@ for x in range(1, 6, 1):
 #     licznik += 1
 
 
-liczby = [1, 2, 2, 2, 2, 3]
-licznik = 0
-while licznik != len(liczby):
-    if liczby[licznik] == 2:
-        liczby.remove(liczby[licznik])
-    else:
-        licznik += 1
-
-print(liczby)
+# liczby = [1, 2, 2, 2, 2, 3]
+# licznik = 0
+# while licznik != len(liczby):
+#     if liczby[licznik] == 2:
+#         liczby.remove(liczby[licznik])
+#     else:
+#         licznik += 1
+#
+# print(liczby)

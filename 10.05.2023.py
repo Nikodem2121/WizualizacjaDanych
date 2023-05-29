@@ -1,6 +1,6 @@
-# import numpy as np
-# import pandas as pd
-# import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 from PIL import Image
 # y=np.arange(2, 9, 2)
 # plt.plot(y)
@@ -111,7 +111,7 @@ from PIL import Image
 #         'stolica': ['Bruksela', 'New delhi', 'brasilia', 'Warszawa'],
 #         'Kontynent': ['Europa', 'Azja', 'Ameryka Południowa', 'Europa'],
 #         'Populacja': [11109846,1303171035,207847528,386756762]}
-
+#
 # df = pd.DataFrame(data)
 # grupa = df.groupby('Kontynent').agg({'Populacja':['sum']})
 # # grupa.plot(kind='bar',xlabel='Kontynenty',ylabel='Populacja',

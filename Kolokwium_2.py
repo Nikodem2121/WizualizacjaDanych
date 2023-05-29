@@ -1,8 +1,7 @@
-                                # # # # # # # # # # # Tworzenie wykresów # # # # # # # # # # # # # #
+                         # # # # # # # # # # # Wykresy # # # # # # # # # # # # # #
 
-
+#-------------------------------------------------------------------------------------------------------------------
 # Kolory i rodzaje lini
-
 # Oznaczenia kolorów:
 #
 # 'b' - niebieski (blue)
@@ -45,9 +44,9 @@
 # 'g--' - zielona przerywana linia
 # 'b^' - niebieskie strzałki skierowane w górę
 
+#-----------------------------------------------------------------------------------------------------------------------------
 
-
-                               # # # # # # # # # # # # # # # Ustawienia legendy # # # # # # # # # # # # # # # # #
+              # # # # # # # # # # # # # # # Legenda # # # # # # # # # # # # # # # # #
 
 
 # Lokalizacja legendy:
@@ -75,11 +74,18 @@
 # framealpha: Określa przeźroczystość ramki legendy.
 # ncol: Określa liczbę kolumn w legendzie.
 
+#------------------------------------------------------------------------------------------------------------------------
+
+                                 # # # # # #  # # importy # # # # # # # # # # #
+
 
 import matplotlib.pyplot as plt  # Biblioteka graficzna do tworzenia wykresów
 import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
+import pandas as pd
+import seaborn as sns
+#---------------------------------------------------------------------------------------------------------------------------
 
-
+                                 # # # # # # Przykład wykresu # # # # # #
 # x = np.array([1, 2, 3, 4])  # Tworzenie tablicy x z wartościami [1, 2, 3, 4]
 # y = x**2  # Obliczanie tablicy y poprzez podniesienie każdego elementu x do kwadratu
 #
@@ -91,7 +97,7 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 #
 # plt.axis([0, 6, 0, 20])  # Ponowne ustalenie zakresu osi x i y na wykresie (min x, max x, min y, max y)
 # plt.show()  # Wyświetlenie wykresu
-
+#-----------------------------------------------------------------------------------------------------------------------------
 # # Tworzenie danych do wykresu
 # a = np.linspace(0, 20, 20)  # Tworzenie tablicy a zawierającej 100 równoodległych wartości od 0 do 5
 #
@@ -106,14 +112,9 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 # # plt.legend(loc='upper right', title='Legenda', fontsize='large')  # Ustawienie lokalizacji, tytułu i rozmiaru czcionki legendy
 # # Wyświetlanie wykresu
 # plt.show()
+#---------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-                             # # # # # # # Tworzenie tablic, macierzy i biblioteka numpy # # # # # # # # # #
-
-                                # # Tworzenie macierzy # #
-
-
+                                            # # Macierze # #
 
 
 # zera = np.zeros((3, 3), dtype='int')  # Tworzenie macierzy 3x3 wypełnionej zerami, typ danych ustawiony na 'int'
@@ -126,7 +127,7 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 #
 # pusta = np.empty((2, 2))  # Tworzenie "pustej" macierzy 2x2 (wartości losowe, niezainicjowane)
 # print(pusta)  # Wyświetlanie zawartości "pustej" macierzy
-
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 
 # macierz = np.array([[12, 11], [2, 1]])
 # print(macierz)
@@ -136,16 +137,16 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 # poz_2 = macierz[0][1]  # Pobieranie elementu o indeksach (0, 1) - pierwszy wiersz, druga kolumna
 # print(poz_1)
 # print(poz_2)
-#
+#---------------------------------------------------------------------------------------------------------------------------------------------------
 # # Tworzenie tablicy liczb liniowych
 # liczby_lin = np.linspace(1, 2, 5)  # Generowanie 5 równoodległych liczb między 1 a 2
 # print(liczby_lin)
-#
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 # # Tworzenie tablicy indeksów
 # z = np.indices([5, 3])  # Generowanie tablicy indeksów dla macierzy o wymiarach 5x3
 # print(z)
 # print(z[0][1][2])  # Pobieranie elementu o indeksach (0, 1, 2)
-#
+#--------------------------------------------------------------------------------------------------------------------------------------------------------
 # # Tworzenie macierzy diagonalnej
 # mat_diag = np.diag([a for a in range(5)])  # Tworzenie macierzy diagonalnej o wartościach od 0 do 4
 # print(mat_diag)
@@ -155,7 +156,7 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 # mat_diag2 = np.diag([a for a in range(5)], k=-1)  # Tworzenie macierzy diagonalnej o wartościach od 0 do 4, przesunięcie o 1 w dół
 # print(mat_diag1)
 # print(mat_diag2)
-
+#-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # Tworzenie macierzy
 # mat = np.arange(25)
@@ -179,7 +180,7 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 #
 # # Tworzenie nowej linii
 # print('')
-#
+#------------------------------------------------------------------------------------------------------------------------------------------
 # # Tworzenie macierzy
 # x = np.array([[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]])
 # print(x)
@@ -192,7 +193,7 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 # y = x[rows, cols]
 # print(y)
 
-
+#------------------------------------------------------------------------------------------------------------------------------------------
 
                                                      # # # # Tablice # # # #
 
@@ -201,12 +202,12 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 # # Pierwsza lista [0, 1] reprezentuje pierwszy wiersz macierzy a
 # # Druga lista [2, 3] reprezentuje drugi wiersz macierzy a
 # print(a)  # Wyświetlenie zawartości macierzy a
-
+#------------------------------------------------------------------------------------------------------------------------------------------
 
 # a = np.arange(2, 5, 0.5)  # (od ilu, do ilu, z jakim skokiem)
 # print(a)  # Wyświetlenie zawartości tablicy a
 # print(type(a))  # Wyświetlanie typu danych
-
+#------------------------------------------------------------------------------------------------------------------------------------------
 # # Tworzenie tablicy znakowej z bufora
 # znaki = b'ogolna'
 # z1 = np.frombuffer(znaki, dtype='S1')  # Tworzenie tablicy znakowej, gdzie każdy znak jest reprezentowany jako bajt
@@ -225,7 +226,7 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 # print(z4)
 # print(z5)
 # print(z6)
-#
+#--------------------------------------------------------------------------------------------------------------------------------------------
 # # Cięcia tablicy
 # a = np.arange(10)
 # print(a)
@@ -241,3 +242,64 @@ import numpy as np  # Biblioteka do manipulacji danymi numerycznymi
 # print(a[2:5])  # Wyjmowanie elementów od indeksu 2 do 4 (indeks 5 jest wykluczony)
 
 
+#------------------------------------------------------------------------------------------------------------------
+                               # # # # # # # # Odczyt pliku # # # # # # # # # # #
+
+
+# # Wczytywanie danych z pliku CSV 'iris.data' do obiektu DataFrame (df)
+# df = pd.read_csv('iris.data', header=0, sep=',', decimal='.')
+#
+# # Wyświetlanie zawartości DataFrame df
+# print(df)
+#
+# # Tworzenie wykresu liniowego (lineplot) przy użyciu biblioteki Seaborn
+# # Parametr data=df określa, że dane pochodzą z DataFrame df
+# # Parametr x=df.index określa, że wartości na osi X będą indeksami DataFrame df
+# # Parametr y='sepal length' określa, że wartości na osi Y będą pochodzić z kolumny 'sepal length'
+# # Parametr hue='class' określa, że linie na wykresie będą różnionie w zależności od wartości w kolumnie 'class'
+# # Parametr palette=['yellow', 'green', 'red'] określa paletę kolorów dla poszczególnych klas
+# sns.lineplot(data=df, x=df.index, y='sepal length', hue='class', palette=['yellow', 'green', 'red'])
+#
+# # Dodawanie etykiety dla osi X
+# plt.xlabel('indeksy')
+#
+# # Dodawanie etykiety dla osi Y
+# plt.ylabel('Wykres liniowy danych z Iris dataset')
+#
+# # Wyświetlanie wykresu
+# plt.show()
+
+#-----------------------------------------------------------------------------------------------------------------------------------------
+
+# # Wczytywanie danych z pliku CSV 'dane.csv' do obiektu DataFrame (df)
+# df = pd.read_csv('dane.csv', header=0, sep=";", decimal=".")
+#
+# # Wyświetlanie zawartości DataFrame df
+# print(df)
+#
+# # Grupowanie danych w kolumnie 'Wartość zamówienia' po wartościach w kolumnie 'Imię i nazwisko' i obliczanie sumy
+# seria = df.groupby('Imię i nazwisko')['Wartość zamówienia'].sum()
+#
+# # Tworzenie wykresu kołowego (pie chart) przy użyciu funkcji plt.pie()
+# # Parametr x=seria określa dane, które mają być przedstawione na wykresie kołowym
+# # Parametr labels=seria.index określa etykiety dla poszczególnych części wykresu
+# # Parametr autopct=lambda pct: "{:.1f}%".format(pct) określa formatowanie etykiet procentowych na wykresie
+# # Parametr textprops=dict(color='black') określa, że etykiety tekstu będą miały czarny kolor
+# # Parametr colors=['red', 'green'] określa kolory dla poszczególnych części wykresu kołowego
+# wedges, texts, autotext = plt.pie(x=seria, labels=seria.index,
+#                                   autopct=lambda pct: "{:.1f}%".format(pct),
+#                                   textprops=dict(color='black'),
+#                                   colors=['red', 'green'])
+#
+# # Dodawanie tytułu dla wykresu
+# plt.title('Suma zamówień dla sprzedawców')
+#
+# # Dodawanie legendy do wykresu w dolnym prawym rogu
+# plt.legend(loc='lower right')
+#
+# # Dodawanie etykiety dla osi Y
+# plt.ylabel('Procentowy wynik wartości zamówień')
+#
+# # Wyświetlanie wykresu
+# plt.show()
+#------------------------------------------------------------------------------------------------------------------------------------

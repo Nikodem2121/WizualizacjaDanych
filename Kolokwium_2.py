@@ -303,3 +303,31 @@ import seaborn as sns
 # # Wyświetlanie wykresu
 # plt.show()
 #------------------------------------------------------------------------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+# Ustawienia siatki 2x2
+fig, axs = plt.subplots(2, 2, figsize=(10, 8))
+
+# Wykres 1: prawy górny róg
+axs[0, 1].set_xlim(-4, 4)    # Zakres na osi x
+axs[0, 1].set_ylim(0, 100)   # Zakres na osi y
+axs[0, 1].set_xticks(range(-4, 5, 2))    # Podziałka na osi x co 2
+axs[0, 1].set_yticks(range(0, 101, 50))  # Podziałka na osi y co 50
+axs[0, 1].set_title('Wykres 1')
+
+# Wykres 2: lewy dolny róg
+axs[1, 0].set_xlim(-4, 4)     # Zakres na osi x
+axs[1, 0].set_ylim(-100, 100) # Zakres na osi y
+axs[1, 0].set_xticks(range(-4, 5, 2))      # Podziałka na osi x co 2
+axs[1, 0].set_yticks(range(-100, 101, 100)) # Podziałka na osi y co 100
+axs[1, 0].set_title('Wykres 2')
+
+# Usunięcie osi z pozostałych dwóch miejsc w siatce
+axs[0, 0].axis('off')
+axs[0, 1].axis('off')
+axs[1, 1].axis('off')
+
+# Wyświetlenie siatki z wykresami
+plt.tight_layout()
+plt.show()

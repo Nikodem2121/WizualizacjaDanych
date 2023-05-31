@@ -304,30 +304,95 @@ import seaborn as sns
 # plt.show()
 #------------------------------------------------------------------------------------------------------------------------------------
 
-import matplotlib.pyplot as plt
 
-# Ustawienia siatki 2x2
-fig, axs = plt.subplots(2, 2, figsize=(10, 8))
+                       #######zad1
 
-# Wykres 1: prawy górny róg
-axs[0, 1].set_xlim(-4, 4)    # Zakres na osi x
-axs[0, 1].set_ylim(0, 100)   # Zakres na osi y
-axs[0, 1].set_xticks(range(-4, 5, 2))    # Podziałka na osi x co 2
-axs[0, 1].set_yticks(range(0, 101, 50))  # Podziałka na osi y co 50
-axs[0, 1].set_title('Wykres 1')
 
-# Wykres 2: lewy dolny róg
-axs[1, 0].set_xlim(-4, 4)     # Zakres na osi x
-axs[1, 0].set_ylim(-100, 100) # Zakres na osi y
-axs[1, 0].set_xticks(range(-4, 5, 2))      # Podziałka na osi x co 2
-axs[1, 0].set_yticks(range(-100, 101, 100)) # Podziałka na osi y co 100
-axs[1, 0].set_title('Wykres 2')
 
-# Usunięcie osi z pozostałych dwóch miejsc w siatce
-axs[0, 0].axis('off')
-axs[0, 1].axis('off')
-axs[1, 1].axis('off')
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# # Generowanie danych
+# x = np.arange(3, 7.25, 0.25)
+# y = np.cos(x) / x**2
+#
+# # Tworzenie wykresu
+# plt.plot(x, y, 'b-', label='f(x) = cos(x)/x^2')
+#
+# # Dodawanie etykiet i tytułów
+# plt.xlabel('x')
+# plt.ylabel('f(x)')
+# plt.title('Wykres funkcji f(x) = cos(x)/x^2')
+# plt.legend()
+#
+# # Ustawianie zakresu osi x
+# plt.xlim(3, 7)
+#
+# # Wyświetlanie wektorów danych
+# print("Wartości x:", x)
+# print("Wartości f(x):", y)
+#
+# # Wyświetlanie wykresu
+# plt.show()
 
-# Wyświetlenie siatki z wykresami
-plt.tight_layout()
-plt.show()
+
+
+
+                             #############zad 2
+
+
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# # Ustawienia siatki 2x2
+# fig, axs = plt.subplots(2, 2, figsize=(12, 6))
+#
+# # Wykres 1: prawy górny róg
+# axs[0, 1].set_xlim(-4, 4)    # Zakres na osi x
+# axs[0, 1].set_ylim(0, 100)   # Zakres na osi y
+# axs[0, 1].set_xticks(range(-4, 5, 2))    # Podziałka na osi x co 2
+# axs[0, 1].set_yticks(range(0, 99, 50))  # Podziałka na osi y co 50
+# axs[0, 1].set_title('Wykres 1')
+# axs[0, 1].grid(True)  # Dodanie siatki
+#
+# # Generowanie danych dla wykresu funkcji 5x^2 * 3x + 2
+# x = np.linspace(-4, 4, 100)
+# y = 5 * x**(2) - 3 * x + 2
+#
+# # Dodanie wykresu funkcji do pierwszego wykresu
+# axs[0, 1].plot(x, y, 'r', label='5x^2 - 3x + 2')  # Linia czerwona
+# axs[0, 1].set_xlabel('Oś x')  # Opis osi x
+# axs[0, 1].set_ylabel('Oś y')  # Opis osi y
+# axs[0, 1].legend()  # Dodanie legendy
+#
+# # Wykres 2: lewy dolny róg
+# axs[1, 0].set_xlim(-4, 4)     # Zakres na osi x
+# axs[1, 0].set_ylim(-100, 100) # Zakres na osi y
+# axs[1, 0].set_xticks(range(-4, 5, 2))      # Podziałka na osi x co 2
+# axs[1, 0].set_yticks(range(-100, 101, 100)) # Podziałka na osi y co 100
+# axs[1, 0].set_title('Wykres 2')
+# axs[1, 0].grid(True)  # Dodanie siatki
+#
+# # Generowanie danych dla wykresu funkcji -2x^3 + 5
+# x = np.linspace(-4, 4, 100)
+# y = -2 * x**3 + 5
+#
+# # Dodanie wykresu funkcji do drugiego wykresu
+# axs[1, 0].plot(x, y, 'go', label='-2x^3 + 5')  # Kropki zielone, blisko siebie
+# axs[1, 0].set_xlabel('Oś x')  # Opis osi x
+# axs[1, 0].set_ylabel('Oś y')  # Opis osi y
+# axs[1, 0].legend(loc='upper center')  # Dodanie legendy
+#
+# # Usunięcie osi z pozostałych dwóch miejsc w siatce
+# axs[0, 0].axis('off')
+# axs[1, 1].axis('off')
+#
+#
+# # Zapis do pliku JPEG
+# plt.savefig('wykresy.jpg', dpi=300)
+#
+# # Wyświetlenie siatki z wykresami
+# plt.tight_layout()
+# plt.show()
+

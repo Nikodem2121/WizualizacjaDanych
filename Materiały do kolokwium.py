@@ -30,6 +30,17 @@ print(i)
 j = pow(5, 2)
 print(j)
 
+
+# Zadanie_2:
+# Dany jest plik tekst.txt. Dokonaj wczytania pliku wraz z obsługą polskich znaków oraz zapisz do zmiennej znaki, 30 znaków
+# z tekstu zaczynając od 30 znaku tekstu. Następnie wyświetl tylko małe litery ze zmiennej znaki.
+
+with open('tekst.txt', 'r', encoding='utf-8') as plik:
+    znaki = plik.read(30)
+    print(znaki.lower())
+    
+#--------------------------
+
 # k = 5**1/2
 # print(k)
 # m = pow(5, 1/2)

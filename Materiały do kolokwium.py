@@ -162,6 +162,28 @@ print(nowa_lista)
 # else:
 #     print('a nie jest większe b lub x nie jest większy od y')
 
+# Zadanie_5:
+# Napisz skrypt, który od użytkownika z konsoli pobiera trzy liczby całkowite a, b i c. Zadaniem jest wykonanie działania
+# sqrt(a) + sin(b) + c^2 i zapisanie wyniku do pliku o nazwie zadanie_5.txt. w skrypcie dokonaj sprawdzenia błędów
+# związanych z wczytywanymi wartościami, do tego celu użyj składni try except.
+
+import math
+
+try:
+    a = int(input('Podaj liczbę całkowitą a: '))
+    b = int(input('Podaj liczbę całkowitą b: '))
+    c = int(input('Podaj liczbę całkowitą c: '))
+    wynik = math.sqrt(a) + math.sin(b) + c**2
+    with open('zadanie_5.txt', 'w') as plik:
+        plik.write(str(wynik))
+except ValueError:
+    print('Podaj liczbę całkowitą!')
+except Exception as e:
+    print('Wystąpił błąd: ', e)
+    
+
+#-------------------------------------
+
 #                                           Pętle for
 # for element in sekwencja:
 #   instrukcja 1

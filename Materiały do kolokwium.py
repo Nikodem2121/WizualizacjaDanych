@@ -212,6 +212,18 @@ while licznik != len(liczby):
 print(liczby)
 
 
+# Zadanie_4: 
+# Napisz skrypt, który policzy i wyświetli następujące wyrażenia:
+# (3/7)^3 + pierwiastek 4 stopnia z (ln(sin^2 (27) + 15)). Wynik zaokrąglij do dwóch miejsc po przecinku
+
+import math
+
+wynik = (3/7)**3 + math.sqrt(math.log(math.sin(27)**2 + 15, 4))
+print(round(wynik, 2))
+
+#------------------------------
+
+
 import math
 #                           ZAD_1a  Napisz skrypt, który policzy i wyświetli następujące wyrażenia: e^10
 e = math.exp(10)

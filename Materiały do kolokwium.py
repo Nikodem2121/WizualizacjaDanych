@@ -72,6 +72,21 @@ print(slownik)
 print(slownik.keys())
 print(slownik.values())
 
+# Zadanie_1:
+# Napisz funkcję, która jako argument przyjmuje listę z liczbami całkowitymi. Zadaniem funkcji jest utworzenie i 
+# zwrócenie nowej listy, gdzie trafią tylko nieparzyste liczby z nieparzystych indeksów z listy podawanej jako argument do funkcji
+
+def zadanie_1(lista):
+    nowa_lista = []
+    for i in range(len(lista)):
+        if i % 2 != 0 and lista[i] % 2 != 0:
+            nowa_lista.append(lista[i])
+    return nowa_lista
+
+print(zadanie_1([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+#---------------------------------------------------
+
 # Formatowanie łańcuchów znakowych
 print('a = %(zm)d' %{'zm': 12})
 print('a = {}, b = {}'.format(12, 14))

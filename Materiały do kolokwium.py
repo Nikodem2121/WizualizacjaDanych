@@ -120,6 +120,17 @@ print('a = {}, b = {}'.format(12, 14))
 #print(type(b))
 
 
+# Zadanie_3:
+# Napisz skrypt, w którym utworzysz listę z liczbami, a następnie za pomocą python comprehension utwórz nową listę, która
+# będzie zawierała tylko liczby całkowite z pierwszej listy.
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+nowa_lista = [x for x in lista if isinstance(x, int)]
+print(nowa_lista)
+
+#------------------------
+
+
 # a = int(a)
 # b = int(b)
 # print(type(a))

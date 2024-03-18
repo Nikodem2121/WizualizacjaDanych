@@ -30,6 +30,17 @@ print(i)
 j = pow(5, 2)
 print(j)
 
+
+# Zadanie_2:
+# Dany jest plik tekst.txt. Dokonaj wczytania pliku wraz z obsługą polskich znaków oraz zapisz do zmiennej znaki, 30 znaków
+# z tekstu zaczynając od 30 znaku tekstu. Następnie wyświetl tylko małe litery ze zmiennej znaki.
+
+with open('tekst.txt', 'r', encoding='utf-8') as plik:
+    znaki = plik.read(30)
+    print(znaki.lower())
+    
+#--------------------------
+
 # k = 5**1/2
 # print(k)
 # m = pow(5, 1/2)
@@ -72,6 +83,21 @@ print(slownik)
 print(slownik.keys())
 print(slownik.values())
 
+# Zadanie_1:
+# Napisz funkcję, która jako argument przyjmuje listę z liczbami całkowitymi. Zadaniem funkcji jest utworzenie i 
+# zwrócenie nowej listy, gdzie trafią tylko nieparzyste liczby z nieparzystych indeksów z listy podawanej jako argument do funkcji
+
+def zadanie_1(lista):
+    nowa_lista = []
+    for i in range(len(lista)):
+        if i % 2 != 0 and lista[i] % 2 != 0:
+            nowa_lista.append(lista[i])
+    return nowa_lista
+
+print(zadanie_1([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+#---------------------------------------------------
+
 # Formatowanie łańcuchów znakowych
 print('a = %(zm)d' %{'zm': 12})
 print('a = {}, b = {}'.format(12, 14))
@@ -92,6 +118,17 @@ print('a = {}, b = {}'.format(12, 14))
 # print(b)
 #print(type(a))
 #print(type(b))
+
+
+# Zadanie_3:
+# Napisz skrypt, w którym utworzysz listę z liczbami, a następnie za pomocą python comprehension utwórz nową listę, która
+# będzie zawierała tylko liczby całkowite z pierwszej listy.
+
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+nowa_lista = [x for x in lista if isinstance(x, int)]
+print(nowa_lista)
+
+#------------------------
 
 
 # a = int(a)
@@ -124,6 +161,28 @@ print('a = {}, b = {}'.format(12, 14))
 #     print(a, x)
 # else:
 #     print('a nie jest większe b lub x nie jest większy od y')
+
+# Zadanie_5:
+# Napisz skrypt, który od użytkownika z konsoli pobiera trzy liczby całkowite a, b i c. Zadaniem jest wykonanie działania
+# sqrt(a) + sin(b) + c^2 i zapisanie wyniku do pliku o nazwie zadanie_5.txt. w skrypcie dokonaj sprawdzenia błędów
+# związanych z wczytywanymi wartościami, do tego celu użyj składni try except.
+
+import math
+
+try:
+    a = int(input('Podaj liczbę całkowitą a: '))
+    b = int(input('Podaj liczbę całkowitą b: '))
+    c = int(input('Podaj liczbę całkowitą c: '))
+    wynik = math.sqrt(a) + math.sin(b) + c**2
+    with open('zadanie_5.txt', 'w') as plik:
+        plik.write(str(wynik))
+except ValueError:
+    print('Podaj liczbę całkowitą!')
+except Exception as e:
+    print('Wystąpił błąd: ', e)
+    
+
+#-------------------------------------
 
 #                                           Pętle for
 # for element in sekwencja:
@@ -173,6 +232,18 @@ while licznik != len(liczby):
         licznik += 1
 
 print(liczby)
+
+
+# Zadanie_4: 
+# Napisz skrypt, który policzy i wyświetli następujące wyrażenia:
+# (3/7)^3 + pierwiastek 4 stopnia z (ln(sin^2 (27) + 15)). Wynik zaokrąglij do dwóch miejsc po przecinku
+
+import math
+
+wynik = (3/7)**3 + math.sqrt(math.log(math.sin(27)**2 + 15, 4))
+print(round(wynik, 2))
+
+#------------------------------
 
 
 import math

@@ -106,13 +106,20 @@ from PIL import Image
 # ts.plot()
 # plt.show()
 
-
+# s = pd.Series([10, 12, 8, 14], index=['a', 'b', 'c', 'd']0)
+# print(s)
+#
 # data ={'kraj': ['Belgia', 'Indie', 'Brazylia','Polska'],
 #         'stolica': ['Bruksela', 'New delhi', 'brasilia', 'Warszawa'],
 #         'Kontynent': ['Europa', 'Azja', 'Ameryka Południowa', 'Europa'],
-#         'Populacja': [11109846,1303171035,207847528,386756762]}
+#         'Populacja': [11109846, 1303171035, 207847528, 386756762]}
 #
 # df = pd.DataFrame(data)
+# print(df)
+# print(s['c'])
+# print(s.c)
+
+
 # grupa = df.groupby('Kontynent').agg({'Populacja':['sum']})
 # # grupa.plot(kind='bar',xlabel='Kontynenty',ylabel='Populacja',
 # #            legend=True, title='Populacja na kontynentch', rot=0)

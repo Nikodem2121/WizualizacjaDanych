@@ -238,13 +238,13 @@ import random
 # Napisz funkcje, która utworzy wektor nxn (n wierszy, n kolumn) składający się z wartości
 # losowych, a następnie funkcja ma zwrócić sumę wszystkich elementów z każdego wiersza
 
-# def wektor_nxn(n):
-#     wektor = []
-#     for i in range(0, n):
-#         lista = [random.randint(0, 20) for _ in range(n)]
-#         wektor.append(lista)
-#     print(wektor)
-#     for j in wektor:
-#         print(j, sum(j))
-#
-# wektor_nxn(5)
+def wektor_nxn(n):
+    wektor = []
+    for i in range(0, n):
+        lista = [random.randint(0, 20) for _ in range(n)]
+        wektor.append(lista)
+    print(wektor)
+    for j in wektor:
+        print(j, sum(j))
+
+wektor_nxn(5)
